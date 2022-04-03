@@ -19,16 +19,16 @@ ui_language_dict = {
         "height_prompt": "Please enter your height (cm)",
         "height_placeholder": "Enter height and press Enter to covnert",
         "height_result_original": "Your height (Metric system):",
-        "height_result_original_unit":"cm",
+        "height_result_original_unit":"centimeters (cm)",
         "height_result_converted": 'Your height (English system):',
-        "height_result_converted_ft": "feet",
-        "height_result_converted_in": "inches",
+        "height_result_converted_ft": "feet (ft)",
+        "height_result_converted_in": "inches (in)",
         # weight
         "weight_label": "Weight",
         "weight_prompt": "Please enter your weight (kg)",
         "weight_placeholder": "Enter weight and press Enter to convert",
         "weight_result_original": "Your wieght (Metric system):",
-        "weight_result_original_unit":"kg",
+        "weight_result_original_unit":"kilograms (kg)",
         "weight_result_converted": 'Your weight (English system)',
         "weight_result_converted_unit": "pounds (lbs)"
     },
@@ -39,16 +39,16 @@ ui_language_dict = {
         "height_prompt": "Please enter your height (cm)",
         "height_placeholder": "Enter height and press Enter to covnert",
         "height_result_original": "Your height (Metric system):",
-        "height_result_original_unit":"cm",
+        "height_result_original_unit":"centimeters (cm)",
         "height_result_converted": 'Your height (English system):',
-        "height_result_converted_ft": "feet",
-        "height_result_converted_in": "inches",
+        "height_result_converted_ft": "feet (ft)",
+        "height_result_converted_in": "inches (in)",
         # weight
         "weight_label": "Weight",
         "weight_prompt": "Please enter your weight (kg)",
         "weight_placeholder": "Enter weight and press Enter to convert",
         "weight_result_original": "Your wieght (Metric system):",
-        "weight_result_original_unit":"kg",
+        "weight_result_original_unit":"kilograms (kg)",
         "weight_result_converted": 'Your weight (English system)',
         "weight_result_converted_unit": "pounds (lbs)"
     },
@@ -59,18 +59,18 @@ ui_language_dict = {
         "height_prompt": "請輸入你的身高 (公分)",
         "height_placeholder": "輸入身高並按 Enter 進行轉換",
         "height_result_original": "你的身高 (公制):",
-        "height_result_original_unit":"公分",
+        "height_result_original_unit":"公分 (cm)",
         "height_result_converted": '你的身高 (英制)',
-        "height_result_converted_ft": "英尺",
-        "height_result_converted_in": "英吋",
+        "height_result_converted_ft": "英尺 (ft or feet)",
+        "height_result_converted_in": "英吋 (in or inches)",
         # weight
         "weight_label": "體重",
         "weight_prompt": "請輸入你的體重 (公斤)",
         "weight_placeholder": "輸入體重並按 Enter 進行轉換",
         "weight_result_original": "你的體重 (公制):",
-        "weight_result_original_unit":"公斤",
+        "weight_result_original_unit":"公斤 (kg)",
         "weight_result_converted": '你的體重 (英制)',
-        "weight_result_converted_unit": "磅"
+        "weight_result_converted_unit": "磅 (pounds or lbs)"
     },
     "zh-CN": {
         "title": '单位换算',
@@ -81,16 +81,16 @@ ui_language_dict = {
         "height_result_original": "你的身高 (公制):",
         "height_result_original_unit":"公分",
         "height_result_converted": '你的身高 (英制)',
-        "height_result_converted_ft": "英尺",
-        "height_result_converted_in": "英吋",
+        "height_result_converted_ft": "英尺 (ft or feet)",
+        "height_result_converted_in": "英吋 (in or inches)",
         # weight
         "weight_label": "体重",
         "weight_prompt": "请输入你的体重 (公斤)",
         "weight_placeholder": "输入体重并按 Enter 进行转换",
         "weight_result_original": "你的体重 (公制):",
-        "weight_result_original_unit":"公斤",
+        "weight_result_original_unit":"公斤 (kg)",
         "weight_result_converted": '你的体重 (英制)',
-        "weight_result_converted_unit": "磅"
+        "weight_result_converted_unit": "磅 (pounds or lbs)"
     }
 }
 
