@@ -5,10 +5,33 @@ language = "en"
 if "lan" in query_params:
     language =  query_params["lan"][0]
 
+#language_list = ["English", "Español", "正體中文", "簡體中文"]
+
 
 ui_language_dict = {
-    "en": {},
-    "es": {},
+    "en": {
+
+    },
+    "es": {
+        "title": '單位換算',
+        # height
+        "height_label": "身高",
+        "height_prompt": "請輸入你的身高 (公分)",
+        "height_placeholder": "輸入身高並按 Enter 進行轉換",
+        "height_result_original": "你的身高 (公制):",
+        "height_result_original_unit":"公分",
+        "height_result_converted": '你的身高 (英制)',
+        "height_result_converted_ft": "英尺",
+        "height_result_converted_in": "英吋",
+        # weight
+        "weight_label": "體重",
+        "weight_prompt": "請輸入你的體重 (公斤)",
+        "weight_placeholder": "輸入體重並按 Enter 進行轉換",
+        "weight_result_original": "你的體重 (公制):",
+        "weight_result_original_unit":"公斤",
+        "weight_result_converted": '你的體重 (英制)',
+        "weight_result_converted_unit": "磅"
+    },
     "zh-TW": {
         "title": '單位換算',
         # height
@@ -28,10 +51,26 @@ ui_language_dict = {
         "weight_result_original_unit":"公斤",
         "weight_result_converted": '你的體重 (英制)',
         "weight_result_converted_unit": "磅"
-
     },
     "zh-CN": {
-        
+        "title": '单位换算',
+        # height
+        "height_label": "身高",
+        "height_prompt": "请输入你的身高 (公分)",
+        "height_placeholder": "输入身高并按 Enter 进行转换",
+        "height_result_original": "你的身高 (公制):",
+        "height_result_original_unit":"公分",
+        "height_result_converted": '你的身高 (英制)',
+        "height_result_converted_ft": "英尺",
+        "height_result_converted_in": "英吋",
+        # weight
+        "weight_label": "体重",
+        "weight_prompt": "请输入你的体重 (公斤)",
+        "weight_placeholder": "输入体重并按 Enter 进行转换",
+        "weight_result_original": "你的体重 (公制):",
+        "weight_result_original_unit":"公斤",
+        "weight_result_converted": '你的体重 (英制)',
+        "weight_result_converted_unit": "磅"
     }
 }
 
