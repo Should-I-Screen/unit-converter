@@ -2,35 +2,55 @@ import streamlit as st
 
 query_params = st.experimental_get_query_params()
 language = "en"
-if "lan" in query_params:
+
+language_list = ["en", "zh-TW", "zh-CN"]
+
+if "lan" in query_params and query_params["lan"][0] in language_list:
     language =  query_params["lan"][0]
 
-#language_list = ["English", "Español", "正體中文", "簡體中文"]
+
 
 
 ui_language_dict = {
     "en": {
-
+        "title": 'Unit Converter',
+        # height
+        "height_label": "Height",
+        "height_prompt": "Please enter your height (cm)",
+        "height_placeholder": "Enter height and press Enter to covnert",
+        "height_result_original": "Your height (Metric system):",
+        "height_result_original_unit":"cm",
+        "height_result_converted": 'Your height (English system):',
+        "height_result_converted_ft": "feet",
+        "height_result_converted_in": "inches",
+        # weight
+        "weight_label": "Weight",
+        "weight_prompt": "Please enter your weight (kg)",
+        "weight_placeholder": "Enter weight and press Enter to convert",
+        "weight_result_original": "Your wieght (Metric system):",
+        "weight_result_original_unit":"kg",
+        "weight_result_converted": 'Your weight (English system)',
+        "weight_result_converted_unit": "pounds (lbs)"
     },
     "es": {
-        "title": '單位換算',
+        "title": 'Unit Converter',
         # height
-        "height_label": "身高",
-        "height_prompt": "請輸入你的身高 (公分)",
-        "height_placeholder": "輸入身高並按 Enter 進行轉換",
-        "height_result_original": "你的身高 (公制):",
-        "height_result_original_unit":"公分",
-        "height_result_converted": '你的身高 (英制)',
-        "height_result_converted_ft": "英尺",
-        "height_result_converted_in": "英吋",
+        "height_label": "Height",
+        "height_prompt": "Please enter your height (cm)",
+        "height_placeholder": "Enter height and press Enter to covnert",
+        "height_result_original": "Your height (Metric system):",
+        "height_result_original_unit":"cm",
+        "height_result_converted": 'Your height (English system):',
+        "height_result_converted_ft": "feet",
+        "height_result_converted_in": "inches",
         # weight
-        "weight_label": "體重",
-        "weight_prompt": "請輸入你的體重 (公斤)",
-        "weight_placeholder": "輸入體重並按 Enter 進行轉換",
-        "weight_result_original": "你的體重 (公制):",
-        "weight_result_original_unit":"公斤",
-        "weight_result_converted": '你的體重 (英制)',
-        "weight_result_converted_unit": "磅"
+        "weight_label": "Weight",
+        "weight_prompt": "Please enter your weight (kg)",
+        "weight_placeholder": "Enter weight and press Enter to convert",
+        "weight_result_original": "Your wieght (Metric system):",
+        "weight_result_original_unit":"kg",
+        "weight_result_converted": 'Your weight (English system)',
+        "weight_result_converted_unit": "pounds (lbs)"
     },
     "zh-TW": {
         "title": '單位換算',
