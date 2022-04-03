@@ -17,7 +17,7 @@ ui_language_dict = {
         # height
         "height_label": "Height",
         "height_prompt": "Please enter your height (cm)",
-        "height_placeholder": "Enter height and press Enter to covnert",
+        "height_placeholder": "Enter height and press Enter to convert",
         "height_result_original": "Your height (Metric system):",
         "height_result_original_unit":"centimeters (cm)",
         "height_result_converted": 'Your height (English system):',
@@ -27,7 +27,7 @@ ui_language_dict = {
         "weight_label": "Weight",
         "weight_prompt": "Please enter your weight (kg)",
         "weight_placeholder": "Enter weight and press Enter to convert",
-        "weight_result_original": "Your wieght (Metric system):",
+        "weight_result_original": "Your weight (Metric system):",
         "weight_result_original_unit":"kilograms (kg)",
         "weight_result_converted": 'Your weight (English system)',
         "weight_result_converted_unit": "pounds (lbs)"
@@ -37,7 +37,7 @@ ui_language_dict = {
         # height
         "height_label": "Height",
         "height_prompt": "Please enter your height (cm)",
-        "height_placeholder": "Enter height and press Enter to covnert",
+        "height_placeholder": "Enter height and press Enter to convert",
         "height_result_original": "Your height (Metric system):",
         "height_result_original_unit":"centimeters (cm)",
         "height_result_converted": 'Your height (English system):',
@@ -47,7 +47,7 @@ ui_language_dict = {
         "weight_label": "Weight",
         "weight_prompt": "Please enter your weight (kg)",
         "weight_placeholder": "Enter weight and press Enter to convert",
-        "weight_result_original": "Your wieght (Metric system):",
+        "weight_result_original": "Your weight (Metric system):",
         "weight_result_original_unit":"kilograms (kg)",
         "weight_result_converted": 'Your weight (English system)',
         "weight_result_converted_unit": "pounds (lbs)"
@@ -93,6 +93,7 @@ ui_language_dict = {
         "weight_result_converted_unit": "磅 (pounds or lbs)"
     }
 }
+
 
 st.title(ui_language_dict[language]["title"])
 
