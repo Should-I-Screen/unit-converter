@@ -94,6 +94,10 @@ ui_language_dict = {
     }
 }
 
+st.set_page_config(
+     page_title=ui_language_dict[language]["title"]
+ )
+
 
 st.title(ui_language_dict[language]["title"])
 
