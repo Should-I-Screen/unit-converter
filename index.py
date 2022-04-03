@@ -113,6 +113,8 @@ with col1:
 
     st.write(ui_language_dict[language]["height_result_converted"], height_ft, ui_language_dict[language]["height_result_converted_ft"], height_in, ui_language_dict[language]["height_result_converted_in"])
 
+    st.metric(label=ui_language_dict[language]["height_result_converted"], value=4)
+
 with col2:
     st.header(ui_language_dict[language]["weight_label"])
     weight_kg =  float(st.text_input(ui_language_dict[language]["weight_prompt"], '70', placeholder=ui_language_dict[language]["weight_placeholder"]))
