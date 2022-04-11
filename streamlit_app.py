@@ -111,9 +111,13 @@ with col1:
     height_ft = height_cm //30.48
     height_in = height_cm//2.54 - height_ft * 12
 
-    st.write(ui_language_dict[language]["height_result_converted"], height_ft, ui_language_dict[language]["height_result_converted_ft"], height_in, ui_language_dict[language]["height_result_converted_in"])
+    #st.write(ui_language_dict[language]["height_result_converted"], height_ft, ui_language_dict[language]["height_result_converted_ft"], height_in, ui_language_dict[language]["height_result_converted_in"])
 
-    st.metric(label=ui_language_dict[language]["height_result_converted"], value=4)
+    st.write(ui_language_dict[language]["height_result_converted"])
+
+    st.metric(label="", value="{} {}".format(height_ft, ui_language_dict[language]["height_result_converted_ft"]))
+    
+    st.metric(label="", value="{} {}".format(height_in, ui_language_dict[language]["height_result_converted_in"]))
 
 with col2:
     st.header(ui_language_dict[language]["weight_label"])
@@ -121,7 +125,12 @@ with col2:
     st.write(ui_language_dict[language]["weight_result_original"], weight_kg, ui_language_dict[language]["weight_result_original_unit"])
     weight_lbs = weight_kg * 2.20462
 
-    st.write(ui_language_dict[language]["weight_result_converted"], weight_lbs, ui_language_dict[language]["weight_result_converted_unit"])
+
+    st.write(ui_language_dict[language]["weight_result_converted"])
+
+    #st.write(ui_language_dict[language]["weight_result_converted"], weight_lbs, ui_language_dict[language]["weight_result_converted_unit"])
+
+    st.metric(label="", value="{:.2f} {}".format(weight_lbs, ui_language_dict[language]["weight_result_converted_unit"]))
 
 # st.write(language)
 
