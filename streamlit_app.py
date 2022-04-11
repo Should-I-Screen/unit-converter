@@ -113,7 +113,9 @@ with col1:
     #height_cm =  int(st.text_input(ui_language_dict[language]["height_prompt"], value='160', placeholder=ui_language_dict[language]["height_placeholder"]))
 
 
-    st.subheader("{} {} {}".format(ui_language_dict[language]["height_result_original"], height_cm, ui_language_dict[language]["height_result_original_unit"]))
+    st.subheader("{}".format(ui_language_dict[language]["height_result_original"]))
+
+    st.metric(label="", value="{} {}".format(height_cm, ui_language_dict[language]["height_result_original_unit"]))
 
     #st.write(ui_language_dict[language]["height_result_original"], height_cm, ui_language_dict[language]["height_result_original_unit"])
 
@@ -138,7 +140,11 @@ with col2:
 
     #weight_kg =  float(st.text_input(ui_language_dict[language]["weight_prompt"], '70', placeholder=ui_language_dict[language]["weight_placeholder"]))
 
-    st.subheader("{} {} {}".format(ui_language_dict[language]["weight_result_original"], weight_kg, ui_language_dict[language]["weight_result_original_unit"]))
+    st.subheader("{}".format(ui_language_dict[language]["weight_result_original"],))
+
+    st.metric(label="", value="{} {}".format( weight_kg, ui_language_dict[language]["weight_result_original_unit"]))
+
+
     #st.write(ui_language_dict[language]["weight_result_original"], weight_kg, ui_language_dict[language]["weight_result_original_unit"])
 
 
