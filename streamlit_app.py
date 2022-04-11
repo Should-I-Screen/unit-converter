@@ -106,14 +106,21 @@ col1, col2 = st.columns(2)
 
 with col1:
     st.header(ui_language_dict[language]["height_label"])
-    height_cm =  int(st.text_input(ui_language_dict[language]["height_prompt"], value='160', placeholder=ui_language_dict[language]["height_placeholder"]))
-    st.write(ui_language_dict[language]["height_result_original"], height_cm, ui_language_dict[language]["height_result_original_unit"])
+    height_cm = st.number_input(ui_language_dict[language]["height_prompt"], min_value=0, max_value=None, value=160, step=1, format="%d", help=ui_language_dict[language]["height_placeholder"], on_change=None, args=None, kwargs=None, disabled=False)
+    #height_cm =  int(st.text_input(ui_language_dict[language]["height_prompt"], value='160', placeholder=ui_language_dict[language]["height_placeholder"]))
+
+
+    st.subheader("{} {} {}".format(ui_language_dict[language]["height_result_original"], height_cm, ui_language_dict[language]["height_result_original_unit"]))
+
+    #st.write(ui_language_dict[language]["height_result_original"], height_cm, ui_language_dict[language]["height_result_original_unit"])
+
     height_ft = height_cm //30.48
     height_in = height_cm//2.54 - height_ft * 12
 
     #st.write(ui_language_dict[language]["height_result_converted"], height_ft, ui_language_dict[language]["height_result_converted_ft"], height_in, ui_language_dict[language]["height_result_converted_in"])
 
-    st.write(ui_language_dict[language]["height_result_converted"])
+    st.subheader(ui_language_dict[language]["height_result_converted"])
+    #st.write(ui_language_dict[language]["height_result_converted"])
 
     st.metric(label="", value="{:.0f} {}".format(height_ft, ui_language_dict[language]["height_result_converted_ft"]))
     
@@ -121,18 +128,28 @@ with col1:
 
 with col2:
     st.header(ui_language_dict[language]["weight_label"])
-    weight_kg =  float(st.text_input(ui_language_dict[language]["weight_prompt"], '70', placeholder=ui_language_dict[language]["weight_placeholder"]))
-    st.write(ui_language_dict[language]["weight_result_original"], weight_kg, ui_language_dict[language]["weight_result_original_unit"])
+
+    weight_kg = st.number_input(ui_language_dict[language]["weight_prompt"], min_value=0.0, max_value=None, value=70.0, step=0.5, format="%f", help=ui_language_dict[language]["weight_placeholder"], on_change=None, args=None, kwargs=None, disabled=False)
+
+    #weight_kg =  float(st.text_input(ui_language_dict[language]["weight_prompt"], '70', placeholder=ui_language_dict[language]["weight_placeholder"]))
+
+    st.subheader("{} {} {}".format(ui_language_dict[language]["weight_result_original"], weight_kg, ui_language_dict[language]["weight_result_original_unit"]))
+    #st.write(ui_language_dict[language]["weight_result_original"], weight_kg, ui_language_dict[language]["weight_result_original_unit"])
+
+
     weight_lbs = weight_kg * 2.20462
 
 
-    st.write(ui_language_dict[language]["weight_result_converted"])
+    st.subheader(ui_language_dict[language]["weight_result_converted"])
+    #st.write(ui_language_dict[language]["weight_result_converted"])
 
     #st.write(ui_language_dict[language]["weight_result_converted"], weight_lbs, ui_language_dict[language]["weight_result_converted_unit"])
 
-    st.metric(label="", value="{:.2f}".format(weight_lbs ))
+    st.metric(label="", value="{:.2f}".format(weight_lbs))
 
-    st.write(ui_language_dict[language]["weight_result_converted_unit"])
+    st.metric(label="", value="{}".format(ui_language_dict[language]["weight_result_converted_unit"]))
+
+    #st.write(ui_language_dict[language]["weight_result_converted_unit"])
 
 # st.write(language)
 
