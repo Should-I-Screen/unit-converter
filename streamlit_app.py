@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 query_params = st.experimental_get_query_params()
 language = "en"
@@ -102,6 +103,54 @@ st.set_page_config(
 st.title(ui_language_dict[language]["title"])
 
 
+if 'user_input_history' not in st.session_state:
+    st.session_state['user_input_history'] = []
+
+def append_history(record):
+    st.session_state['user_input_history'].append(record)
+
+@st.cache
+def append_height_record(origin, feet, inches):
+   append_history({
+       "type": "height",
+       "input": origin,
+       "output": {
+            "feet": feet,
+            "inches": inches
+       }
+   })
+@st.cache
+def append_weight_record(origin, pounds):
+   append_history({
+       "type": "weight",
+       "input": origin,
+       "output": {
+            "pounds": pounds
+       }
+   })
+
+def get_record(type):
+    filtered = [d for d in st.session_state['user_input_history'] if d["type"] == type]
+    return filtered
+
+def convert_hight(height_cm):
+    height_ft = height_cm //30.48
+    height_in = height_cm//2.54 - height_ft * 12
+
+    return height_ft, height_in
+
+def convert_weight(weight_kg):
+    weight_lbs = weight_kg * 2.20462
+
+    return weight_lbs
+
+
+#def convert_weight_record_to_dataframe(record_list):
+
+
+
+
+
 col1, col2 = st.columns(2)
 
 with col1:
@@ -119,8 +168,10 @@ with col1:
 
     #st.write(ui_language_dict[language]["height_result_original"], height_cm, ui_language_dict[language]["height_result_original_unit"])
 
-    height_ft = height_cm //30.48
-    height_in = height_cm//2.54 - height_ft * 12
+    #height_ft = height_cm //30.48
+    #height_in = height_cm//2.54 - height_ft * 12
+
+    height_ft, height_in = convert_hight(height_cm)
 
     #st.write(ui_language_dict[language]["height_result_converted"], height_ft, ui_language_dict[language]["height_result_converted_ft"], height_in, ui_language_dict[language]["height_result_converted_in"])
 
@@ -130,6 +181,10 @@ with col1:
     st.metric(label="", value="{:.0f} {}".format(height_ft, ui_language_dict[language]["height_result_converted_ft"]))
     
     st.metric(label="", value="{:.0f} {}".format(height_in, ui_language_dict[language]["height_result_converted_in"]))
+
+    append_height_record(height_cm, height_ft, height_in)
+
+    st.json(get_record("height")[::-1])
 
 with col2:
     st.header(ui_language_dict[language]["weight_label"])
@@ -148,8 +203,7 @@ with col2:
     #st.write(ui_language_dict[language]["weight_result_original"], weight_kg, ui_language_dict[language]["weight_result_original_unit"])
 
 
-    weight_lbs = weight_kg * 2.20462
-
+    weight_lbs = convert_weight (weight_kg)
 
     st.subheader(ui_language_dict[language]["weight_result_converted"])
     #st.write(ui_language_dict[language]["weight_result_converted"])
@@ -161,6 +215,13 @@ with col2:
     st.metric(label="", value="{}".format(ui_language_dict[language]["weight_result_converted_unit"]))
 
     #st.write(ui_language_dict[language]["weight_result_converted_unit"])
+
+
+    append_weight_record(weight_kg, weight_lbs)
+
+    #reversed_list = systems[::-1]
+
+    st.json(get_record("weight")[::-1])
 
 # st.write(language)
 
