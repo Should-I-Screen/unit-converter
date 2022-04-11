@@ -115,9 +115,9 @@ with col1:
 
     st.write(ui_language_dict[language]["height_result_converted"])
 
-    st.metric(label="", value="{} {}".format(height_ft, ui_language_dict[language]["height_result_converted_ft"]))
+    st.metric(label="", value="{:.0f} {}".format(height_ft, ui_language_dict[language]["height_result_converted_ft"]))
     
-    st.metric(label="", value="{} {}".format(height_in, ui_language_dict[language]["height_result_converted_in"]))
+    st.metric(label="", value="{:.0f} {}".format(height_in, ui_language_dict[language]["height_result_converted_in"]))
 
 with col2:
     st.header(ui_language_dict[language]["weight_label"])
@@ -130,7 +130,9 @@ with col2:
 
     #st.write(ui_language_dict[language]["weight_result_converted"], weight_lbs, ui_language_dict[language]["weight_result_converted_unit"])
 
-    st.metric(label="", value="{:.2f} {}".format(weight_lbs, ui_language_dict[language]["weight_result_converted_unit"]))
+    st.metric(label="", value="{:.2f}".format(weight_lbs ))
+
+    st.write(ui_language_dict[language]["weight_result_converted_unit"])
 
 # st.write(language)
 
