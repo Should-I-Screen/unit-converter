@@ -184,7 +184,7 @@ with col1:
 
     append_height_record(height_cm, height_ft, height_in)
 
-    st.json(get_record("height")[::-1])
+    #st.json(get_record("height")[::-1])
 
 with col2:
     st.header(ui_language_dict[language]["weight_label"])
@@ -221,7 +221,7 @@ with col2:
 
     #reversed_list = systems[::-1]
 
-    st.json(get_record("weight")[::-1])
+    #st.json(get_record("weight")[::-1])
 
 # st.write(language)
 
