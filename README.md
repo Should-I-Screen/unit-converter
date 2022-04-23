@@ -1,4 +1,4 @@
-# unit-converter-streamlit
+# unit-converter
 
 This unit converter (Metric to English system) is developed using [Streamlit.io](https://streamlit.io/).
 
