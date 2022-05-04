@@ -31,10 +31,13 @@ ui_language_dict = {
         "weight_result_original": "Weight (Metric system):",
         "weight_result_original_unit":"kilograms (kg)",
         "weight_result_converted": 'Weight (English system):',
-        "weight_result_converted_unit": "pounds (lbs)"
+        "weight_result_converted_unit": "pounds (lbs)",
+
+        # additional
+        "footer_text": "Built by [Pei-Yao Hung](https://peiyaoh.github.io/) for a lung cancer screening decision aid: [shouldiscreen.com](https://shouldiscreen.com/English/home)"
     },
     "es": {
-        "title": 'Unit Converter',
+        "title": '(es) Unit Converter',
         # height
         "height_label": "Height",
         "height_prompt": "Please enter your height (cm)",
@@ -51,7 +54,10 @@ ui_language_dict = {
         "weight_result_original": "Your weight (Metric system):",
         "weight_result_original_unit":"kilograms (kg)",
         "weight_result_converted": 'Your weight (English system):',
-        "weight_result_converted_unit": "pounds (lbs)"
+        "weight_result_converted_unit": "pounds (lbs)",
+
+        # additional
+        "footer_text": "Built by [Pei-Yao Hung](https://peiyaoh.github.io/) for a lung cancer screening decision aid: [shouldiscreen.com](https://shouldiscreen.com/Espa%C3%B1ol/inicio)"
     },
     "zh-TW": {
         "title": '身高體重公制轉英制單位換算',
@@ -71,7 +77,10 @@ ui_language_dict = {
         "weight_result_original": "體重 (公制):",
         "weight_result_original_unit":"公斤 (kg)",
         "weight_result_converted": '體重 (英制)',
-        "weight_result_converted_unit": "磅 (pounds or lbs)"
+        "weight_result_converted_unit": "磅 (pounds or lbs)",
+
+        # additional
+        "footer_text": "由 [洪培堯](https://peiyaoh.github.io/) 開發用以支援肺癌篩檢輔助決策工具 [shouldiscreen.com](https://shouldiscreen.com/TraditionalChinese/home)"
     },
     "zh-CN": {
         "title": '身高体重公制转英制单位换算',
@@ -91,7 +100,10 @@ ui_language_dict = {
         "weight_result_original": "体重 (公制):",
         "weight_result_original_unit":"公斤 (kg)",
         "weight_result_converted": '体重 (英制)',
-        "weight_result_converted_unit": "磅 (pounds or lbs)"
+        "weight_result_converted_unit": "磅 (pounds or lbs)",
+
+        # additional
+        "footer_text": "由 [洪培尧](https://peiyaoh.github.io/) 开发用以支援肺癌筛检辅助决策工具 [shouldiscreen.com](https://shouldiscreen.com/SimplifiedChinese/home)"
     }
 }
 
@@ -225,6 +237,13 @@ with col2:
 
 # st.write(language)
 
+st.text("")
+st.text("")
+st.text("")
+st.text("")
+st.text("")
+# footer
+st.write(ui_language_dict[language]["footer_text"])
 
 
 
